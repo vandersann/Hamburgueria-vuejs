@@ -12,7 +12,7 @@ export default {
     },
     created() {
         setTimeout(() => {
-            this.nome = 'Vander'
+            this.nome = 'Pedrinho'
         }, 1000);
     },
     mounted() {
