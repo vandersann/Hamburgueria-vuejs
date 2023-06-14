@@ -9,16 +9,24 @@
         <li>Ionic</li>
     </ul>
     <p v-show="mostrar_email"> Entre em contato via: {{ email }}</p>
+    <p>Para acessar meu portfólio <a v-bind:href="meu_link" target="_blank">basta clicar aqui</a></p>
+    <Picture/>
 </div>
 </template>
 <script>
+import Picture from "./Picture.vue";
+
     export default{
         name: 'Info',
+        components: {
+            Picture
+        },
         data() {
             return {
                 esta_trabalhando: true,
                 mostrar_email: true,
-                email:"vandersann@gmail.com"
+                email:"vandersann@gmail.com",
+                meu_link:"https://google.com"
             }
         }
     }
