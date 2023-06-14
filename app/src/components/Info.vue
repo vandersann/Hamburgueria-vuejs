@@ -8,6 +8,9 @@
         <li>JavaScript</li>
         <li>Ionic</li>
     </ul>
+    <div>
+        <button @click="showEmail">{{ textoBotao }}</button>
+    </div>
     <p v-show="mostrar_email"> Entre em contato via: {{ email }}</p>
     <p>Para acessar meu portfólio <a v-bind:href="meu_link" target="_blank">basta clicar aqui</a></p>
     <Picture/>
@@ -24,9 +27,20 @@ import Picture from "./Picture.vue";
         data() {
             return {
                 esta_trabalhando: true,
-                mostrar_email: true,
+                mostrar_email: false,
                 email:"vandersann@gmail.com",
-                meu_link:"https://google.com"
+                meu_link:"https://google.com",
+                textoBotao: "Mostrar Email"
+            }
+        },
+        methods: {
+            showEmail() {
+                this.mostrar_email= !this.mostrar_email
+                if(!this.mostrar_email) {
+                    this.textoBotao= "Mostrar Email"
+                } else {
+                    this.textoBotao = "Esconder Email"
+                }
             }
         }
     }
