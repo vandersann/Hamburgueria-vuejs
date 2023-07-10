@@ -6,7 +6,7 @@ export default {
     name: 'Picture',
     data() {
         return {
-            avatar:"/app/public/img/avatar.png",
+            avatar:"/img/avatar.png",
             descricao:"Vander Sandino"
         }
     }
